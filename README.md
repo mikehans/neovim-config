@@ -7,7 +7,7 @@ Goal of this repo is to contain my Neovim setup for use as an IDE.
 * Editorconfig
 * airline
 * easy motion replacement
-* nerd commenter replacement
+* nerd commenter replacement (toggle comment, comment "sexily", yank then comment)
 * emmet
 * vim-fugitive implementation
 * git gutter implementation
