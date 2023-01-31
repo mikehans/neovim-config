@@ -1,6 +1,17 @@
 # Neovim config
 Goal of this repo is to contain my Neovim setup for use as an IDE.
 
+1 Feb 2023: Still need functionality for:
+* Auto-close matching brace
+* Better file navigator than netrw
+* Editorconfig
+* airline
+* easy motion replacement
+* nerd commenter replacement
+* emmet
+* vim-fugitive implementation
+* git gutter implementation
+
 ## Keymappings
 ### Normal mode
 #### General
