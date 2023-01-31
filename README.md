@@ -2,7 +2,8 @@
 Goal of this repo is to contain my Neovim setup for use as an IDE.
 
 ## Keymappings
-### General (Normal mode)
+### Normal mode
+#### General
 |Key combo|Definition|
 |--------|--------|
 |Alt-e|Edits $MYVIMRC, sets cwd to $MYVIMRC dir and opens netrw|
@@ -15,18 +16,12 @@ Goal of this repo is to contain my Neovim setup for use as an IDE.
 |Alt-j|Move line down|
 |Alt-k|Move line up|
 
-### General (Visual mode)
-|Key combo|Definition|
-|--------|--------|
-|Alt-j|Move line/s down|
-|Alt-k|Move line/s up|
-
-### Resizing windows
+#### Resizing windows
 |Key combo|Definition|
 |--------|--------|
 |C-Up / Down / Left / Right arrows | Resizes the active window |
 
-### LSP
+#### LSP
 |Key combo|Definition|
 |--------|--------|
 |gD|Declaration|
@@ -36,3 +31,11 @@ Goal of this repo is to contain my Neovim setup for use as an IDE.
 |C-k|Signature help|
 |Leader-rn|Rename|
 |gr|References|
+
+### Visual mode
+|Key combo|Definition|
+|--------|--------|
+|Alt-j|Move line/s down|
+|Alt-k|Move line/s up|
+
+
