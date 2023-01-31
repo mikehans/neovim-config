@@ -14,6 +14,7 @@ vim.g.maplocalleader = ","
 keymap('n', '<A-n>', ':set rnu!<cr>', opts)
 keymap('n', '<A-h>', ':set hls!<cr>', opts)
 keymap('n', '<A-e>', ':lua MyFuncs.openConfig()<cr>', opts)
+keymap('n', '<A-w>', ':set wrap!<cr>', opts)
 
 -- Modes
 --   normal_mode = "n",
