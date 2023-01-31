@@ -13,8 +13,9 @@ M.setup = function()
     vim.fn.sign_define(sign.name, {texthl = sign.name, text = sign.text, numhl = ""})
   end
 
+  local testme
   local config = {
-    virtual_text=false,
+    virtual_text = true,
     signs = {
       active = signs,
     },
@@ -30,6 +31,8 @@ M.setup = function()
   }
 
   vim.diagnostic.config(config)
+
+  local asdf
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     border = "rounded",
@@ -67,10 +70,10 @@ local function lsp_keymaps(bufnr)
   keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
   keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
   keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
-  keymap(bufnr, "n", "gl", "<cmd>lua vim.lsp.diagnostic.open_float()<cr>", opts) -- error
-  keymap(bufnr, "n", "[d", '<cmd>lua vim.lsp.diagnostic.goto_prev({border = "rounded"})<cr>', opts) -- error
-  keymap(bufnr, "n", "]d", '<cmd>lua vim.lsp.diagnostic.goto_next({border = "rounded"})<cr>', opts) -- error
-  keymap(bufnr, "n", "<leader>q", '<cmd>lua vim.lsp.diagnostic.setloclist()<cr>', opts) -- error
+  keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
+  keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({border = "rounded"})<cr>', opts)
+  keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({border = "rounded"})<cr>', opts)
+  keymap(bufnr, "n", "<leader>q", '<cmd>lua vim.diagnostic.setloclist()<cr>', opts)
 
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
