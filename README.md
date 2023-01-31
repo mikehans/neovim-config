@@ -31,6 +31,9 @@ Goal of this repo is to contain my Neovim setup for use as an IDE.
 |C-k|Signature help|
 |Leader-rn|Rename|
 |gr|References|
+|gl|Open message in float|
+|]d|Goto next message|
+|[d|Goto previous message|
 
 ### Visual mode
 |Key combo|Definition|
