@@ -13,8 +13,8 @@ vim.g.maplocalleader = ","
 
 keymap('n', '<A-n>', ':set rnu!<cr>', opts)
 keymap('n', '<A-h>', ':set hls!<cr>', opts)
-keymap('n', '<A-e>', ':lua MyFuncs.openConfig()<cr>', opts)
 keymap('n', '<A-w>', ':set wrap!<cr>', opts)
+keymap('n', '<A-e>', ':lua MyFuncs.openConfig()<cr>', opts)
 
 -- Modes
 --   normal_mode = "n",
@@ -26,10 +26,10 @@ keymap('n', '<A-w>', ':set wrap!<cr>', opts)
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts) -- this one doesn't work
+-- keymap("n", "<C-h>", "<C-w>h", opts)
+-- keymap("n", "<C-j>", "<C-w>j", opts)
+-- keymap("n", "<C-k>", "<C-w>k", opts)
+-- keymap("n", "<C-l>", "<C-w>l", opts) -- this one doesn't work
 
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
@@ -44,9 +44,8 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
--- Something wrong with these
--- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
--- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", "<Esc>:m +1<CR>", opts)
+keymap("n", "<A-k>", "<Esc>:m -2<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -54,9 +53,8 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+keymap("v", "<A-j>", ":m +1<CR>", opts)
+keymap("v", "<A-k>", ":m -2<CR>", opts)
 
 -- Visual Block --
 -- Move text up and down
